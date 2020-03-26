@@ -6,7 +6,7 @@
 /*   By: ybayart <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 15:04:54 by ybayart           #+#    #+#             */
-/*   Updated: 2020/01/20 16:03:57 by ybayart          ###   ########.fr       */
+/*   Updated: 2020/01/21 17:27:42 by ybayart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ Enemy&	Enemy::operator = (const Enemy& copy)
 
 Enemy::~Enemy(void)
 {
+	std::cout << this->m_die << std::endl;
 }
 
 int			Enemy::getHP(void) const

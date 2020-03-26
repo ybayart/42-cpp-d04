@@ -6,7 +6,7 @@
 /*   By: ybayart <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 14:58:37 by ybayart           #+#    #+#             */
-/*   Updated: 2020/01/20 16:05:40 by ybayart          ###   ########.fr       */
+/*   Updated: 2020/01/21 17:15:44 by ybayart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include "Enemy.hpp"
 #include "SuperMutant.hpp"
 #include "RadScorpion.hpp"
+#include "Character.hpp"
 
 int main()
 {

@@ -6,7 +6,7 @@
 /*   By: ybayart <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 15:27:48 by ybayart           #+#    #+#             */
-/*   Updated: 2020/01/20 16:07:16 by ybayart          ###   ########.fr       */
+/*   Updated: 2020/01/21 17:27:15 by ybayart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,4 @@ RadScorpion&	RadScorpion::operator = (const RadScorpion& copy)
 
 RadScorpion::~RadScorpion(void)
 {
-	std::cout << this->m_die << std::endl;
 }
