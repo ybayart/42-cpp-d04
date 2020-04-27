@@ -23,6 +23,7 @@
 int main()
 {
 	Character* moi = new Character("moi");
+	SuperMutant toto = SuperMutant();
 
 	std::cout << *moi;
 
@@ -42,6 +43,39 @@ int main()
 	moi->attack(b);
 	std::cout << *moi;
 	moi->attack(b);
+	std::cout << *moi;
+
+	moi->equip(pr);
+	std::cout << "HP: " << b->getHP() << std::endl;
+	moi->attack(&toto);
+	std::cout << *moi;
+	moi->recoverAP();
+	std::cout << *moi;
+	moi->recoverAP();
+	std::cout << *moi;
+	moi->recoverAP();
+	std::cout << *moi;
+	std::cout << "HP: " << b->getHP() << std::endl;
+	moi->attack(b);
+	moi->attack(b);
+	std::cout << *moi;
+	moi->attack(b);
+	std::cout << *moi;
+	moi->attack(b);
+	std::cout << *moi;
+	moi->attack(b);
+	std::cout << *moi;
+	moi->attack(&toto);
+	std::cout << *moi;
+	moi->attack(&toto);
+	std::cout << *moi;
+	moi->attack(&toto);
+	std::cout << *moi;
+	moi->attack(&toto);
+	std::cout << *moi;
+	moi->attack(&toto);
+	std::cout << *moi;
+	moi->attack(&toto);
 	std::cout << *moi;
 
 	return 0;

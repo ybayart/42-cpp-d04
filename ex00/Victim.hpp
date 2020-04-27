@@ -22,12 +22,9 @@ class	Victim
 
 	std::string		m_name;
 
-	private:
-
-	Victim(void);
-
 	public:
 
+	Victim(void);
 	Victim(std::string name);
 	Victim(const Victim &victim);
 	Victim &operator=(const Victim &victim);

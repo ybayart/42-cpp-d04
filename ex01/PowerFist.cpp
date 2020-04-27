@@ -40,3 +40,8 @@ PowerFist&	PowerFist::operator = (const PowerFist& copy)
 PowerFist::~PowerFist(void)
 {
 }
+
+void		PowerFist::attack(void) const
+{
+	std::cout << this->m_attack << std::endl;
+}

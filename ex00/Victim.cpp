@@ -12,6 +12,12 @@
 
 #include "Victim.hpp"
 
+Victim::Victim(void)
+{
+	this->m_name = "John";
+	std::cout << "A random victim called " << this->m_name << " just appeared!" << std::endl;
+}
+
 Victim::Victim(std::string name)
 {
 	this->m_name = name;

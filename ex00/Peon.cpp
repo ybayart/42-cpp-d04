@@ -12,10 +12,26 @@
 
 #include "Peon.hpp"
 
-Peon::Peon(std::string name) : Victim(name)
+Peon::Peon(void)
+{
+	this->m_name = "John";
+	std::cout << "Zog zog." << std::endl;
+}
+
+Peon::Peon(std::string name)
 {
 	this->m_name = name;
 	std::cout << "Zog zog." << std::endl;
+}
+
+Peon::Peon(const Peon &copy) {
+	this->m_name = copy.getName();
+}
+
+Peon& Peon::operator=(const Peon &copy)
+{
+	this->m_name = copy.getName();
+    return (*this);
 }
 
 Peon::~Peon(void)

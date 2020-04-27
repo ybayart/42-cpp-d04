@@ -40,3 +40,8 @@ PlasmaRifle&	PlasmaRifle::operator = (const PlasmaRifle& copy)
 PlasmaRifle::~PlasmaRifle(void)
 {
 }
+
+void		PlasmaRifle::attack(void) const
+{
+	std::cout << this->m_attack << std::endl;
+}

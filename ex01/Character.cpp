@@ -57,7 +57,7 @@ void	Character::attack(Enemy* enemy)
 		else
 		{
 			this->m_AP -= this->m_weapon->getAPCost();
-			std::cout << this->m_name << " attaque " << enemy->getType() << " with a " << this->m_weapon->getName() << std::endl;
+			std::cout << this->m_name << " hasttaque " << enemy->getType() << " with a " << this->m_weapon->getName() << std::endl;
 			this->m_weapon->attack();
 			enemy->takeDamage(this->m_weapon->getDamage());
 			if (enemy->getHP() <= 0)

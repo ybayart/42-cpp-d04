@@ -14,7 +14,6 @@
 #include "Victim.hpp"
 #include "Peon.hpp"
 
-
 class Looser : public Victim
 {
 	public:
@@ -53,7 +52,7 @@ int		main()
 	std::cout << robert << jim << joe;
 
 	robert.polymorph(jim);
-	patrick.polymorph(jim);
+	patrick.polymorph(ben);
 	bruce.polymorph(joe);
 	robert.polymorph(tom);
 	robert.polymorph(jerry);
