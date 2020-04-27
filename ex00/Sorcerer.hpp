@@ -23,11 +23,15 @@ class	Sorcerer
 
 	std::string		m_name;
 	std::string		m_title;
+	Sorcerer();
 
 	public:
 	
 	Sorcerer(std::string name, std::string title);
+	Sorcerer(const Sorcerer &copy);
 	~Sorcerer(void);
+
+	Sorcerer		&operator=(const Sorcerer &copy);
 
 	std::string		getName(void) const;
 	std::string		getTitle(void) const;

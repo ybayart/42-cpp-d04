@@ -12,6 +12,8 @@
 
 #include "Sorcerer.hpp"
 
+//========== CONSTRUCT
+
 Sorcerer::Sorcerer(std::string name, std::string title)
 {
 	m_name = name;
@@ -19,10 +21,26 @@ Sorcerer::Sorcerer(std::string name, std::string title)
 	std::cout << m_name << ", " << m_title << ", is born!" << std::endl;
 }
 
+Sorcerer::Sorcerer(const Sorcerer &copy) {
+	this->m_name = copy.getName();
+	this->m_title = copy.getTitle();
+}
+
+Sorcerer& Sorcerer::operator=(const Sorcerer &copy)
+{
+	this->m_name = copy.getName();
+	this->m_title = copy.getTitle();
+    return (*this);
+}
+
+//========== DESTRUCT
+
 Sorcerer::~Sorcerer(void)
 {
 	std::cout << m_name << ", " << m_title << ", is dead. Consequences will never be the same!" << std::endl;
 }
+
+//========== GETTER
 
 std::string		Sorcerer::getName(void) const
 {
@@ -34,10 +52,14 @@ std::string		Sorcerer::getTitle(void) const
 	return (this->m_title);
 }
 
+//========== MEMBER
+
 void			Sorcerer::polymorph(Victim const& elem)
 {
 	elem.getPolymorphed();
 }
+
+//========== OPERATOR
 
 std::ostream &operator << (std::ostream &o, Sorcerer const& elem)
 {

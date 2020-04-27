@@ -22,13 +22,19 @@ class	Victim
 
 	std::string		m_name;
 
+	private:
+
+	Victim(void);
+
 	public:
 
 	Victim(std::string name);
-	~Victim(void);
+	Victim(const Victim &victim);
+	Victim &operator=(const Victim &victim);
+	virtual ~Victim(void);
 
 	std::string		getName(void) const;
-	void			getPolymorphed(void) const;
+	virtual void	getPolymorphed(void) const;
 };
 
 std::ostream &operator << (std::ostream &o, Victim const& elem);

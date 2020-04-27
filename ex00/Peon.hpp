@@ -20,9 +20,9 @@ class	Peon : public Victim
 	public:
 
 	Peon(std::string name);
-	~Peon(void);
+	virtual ~Peon(void);
 
-	void		getPolymorphed(void) const;
+	virtual void	getPolymorphed(void) const;
 };
 
 #endif
