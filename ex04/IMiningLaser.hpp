@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   IMiningLaser.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hexa <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 20:52:38 by hexa              #+#    #+#             */
-/*   Updated: 2020/04/28 01:41:54 by hexa             ###   ########.fr       */
+/*   Created: 2020/04/28 01:50:33 by hexa              #+#    #+#             */
+/*   Updated: 2020/04/28 02:52:29 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef IMININGLASER_HPP
+# define IMININGLASER_HPP
 
-# include "AMateria.hpp"
+# include <iostream>
+# include "IAsteroid.hpp"
 
-class	Ice : public AMateria
+class	IAsteroid;
+
+class	IMiningLaser
 {
 	public:
-		Ice(void);
-		Ice(const Ice&);
+		virtual ~IMiningLaser() {}
 
-		~Ice(void);
-
-		Ice&	operator= (const Ice&);
-
-		AMateria*		clone(void) const;
-		virtual void	use(ICharacter&);
+		virtual void	mine(IAsteroid*) = 0;
 };
 
 #endif

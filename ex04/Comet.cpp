@@ -1,46 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.cpp                                            :+:      :+:    :+:   */
+/*   Comet.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hexa <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 20:56:04 by hexa              #+#    #+#             */
-/*   Updated: 2020/04/28 01:42:06 by hexa             ###   ########.fr       */
+/*   Created: 2020/04/28 02:30:47 by hexa              #+#    #+#             */
+/*   Updated: 2020/04/28 02:33:03 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Ice.hpp"
+#include "Comet.hpp"
+#include "DeepCoreMiner.hpp"
+#include "StripMiner.hpp"
 
-Ice::Ice(void) : AMateria("ice") {}
+Comet::Comet(void) {}
 
-Ice::Ice(const Ice &src)
+Comet::Comet(const Comet& src)
 {
 	*this = src;
 }
 
-Ice::~Ice(void) {}
+Comet::~Comet(void) {}
 
-Ice&
-Ice::operator= (const Ice &rhs)
+Comet&
+Comet::operator=	(const Comet& rhs)
 {
-	if (this != &rhs)
-	{
-		this->m_xp = rhs.m_xp;
-		this->m_type = rhs.m_type;
-	}
+	(void)rhs;
 	return (*this);
 }
 
-AMateria*
-Ice::clone(void) const
+std::string
+Comet::beMined(DeepCoreMiner* laser) const
 {
-	return (new Ice());
+	(void)laser;
+	return ("Meium");
 }
 
-void
-Ice::use(ICharacter& target)
+std::string
+Comet::beMined(StripMiner* laser) const
 {
-	m_xp += 10;
-	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+	(void)laser;
+	return ("Tartarite");
+}
+
+std::string
+Comet::getName(void) const
+{
+	return ("Comet");
 }

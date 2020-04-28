@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   DeepCoreMiner.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hexa <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 20:52:38 by hexa              #+#    #+#             */
-/*   Updated: 2020/04/28 01:41:54 by hexa             ###   ########.fr       */
+/*   Created: 2020/04/28 01:51:29 by hexa              #+#    #+#             */
+/*   Updated: 2020/04/28 02:59:13 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef DEEPCOREMINER_HPP
+# define DEEPCOREMINER_HPP
 
-# include "AMateria.hpp"
+# include "IMiningLaser.hpp"
 
-class	Ice : public AMateria
+class	IAsteroid;
+
+class	DeepCoreMiner : public IMiningLaser
 {
 	public:
-		Ice(void);
-		Ice(const Ice&);
+		DeepCoreMiner(void);
+		DeepCoreMiner(const DeepCoreMiner&);
 
-		~Ice(void);
+		DeepCoreMiner&	operator= (const DeepCoreMiner&);
 
-		Ice&	operator= (const Ice&);
+		~DeepCoreMiner(void);
 
-		AMateria*		clone(void) const;
-		virtual void	use(ICharacter&);
+		virtual void	mine(IAsteroid*);
 };
 
 #endif

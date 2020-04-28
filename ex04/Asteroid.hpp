@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   Asteroid.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hexa <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 20:52:38 by hexa              #+#    #+#             */
-/*   Updated: 2020/04/28 01:41:54 by hexa             ###   ########.fr       */
+/*   Created: 2020/04/28 02:29:46 by hexa              #+#    #+#             */
+/*   Updated: 2020/04/28 02:34:18 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef ASTEROID_HPP
+# define ASTEROID_HPP
 
-# include "AMateria.hpp"
+# include "IAsteroid.hpp"
 
-class	Ice : public AMateria
+class DeepCoreMiner;
+class StripMiner;
+
+class Asteroid : public IAsteroid
 {
 	public:
-		Ice(void);
-		Ice(const Ice&);
+		Asteroid(void);
+		Asteroid(const Asteroid & src);
+		~Asteroid(void);
 
-		~Ice(void);
+		Asteroid & operator=(const Asteroid & src);
 
-		Ice&	operator= (const Ice&);
-
-		AMateria*		clone(void) const;
-		virtual void	use(ICharacter&);
+		std::string beMined(DeepCoreMiner* laser) const;
+		std::string beMined(StripMiner* laser) const;
+		std::string getName(void) const;
 };
 
 #endif

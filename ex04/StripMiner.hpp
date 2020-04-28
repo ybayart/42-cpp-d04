@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   StripMiner.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hexa <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 20:52:38 by hexa              #+#    #+#             */
-/*   Updated: 2020/04/28 01:41:54 by hexa             ###   ########.fr       */
+/*   Created: 2020/04/28 01:51:29 by hexa              #+#    #+#             */
+/*   Updated: 2020/04/28 03:00:44 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef STRIPMINER_HPP
+# define STRIPMINER_HPP
 
-# include "AMateria.hpp"
+# include "IMiningLaser.hpp"
 
-class	Ice : public AMateria
+class	IAsteroid;
+
+class	StripMiner : public IMiningLaser
 {
 	public:
-		Ice(void);
-		Ice(const Ice&);
+		StripMiner(void);
+		StripMiner(const StripMiner&);
 
-		~Ice(void);
+		StripMiner&	operator= (const StripMiner&);
 
-		Ice&	operator= (const Ice&);
+		~StripMiner(void);
 
-		AMateria*		clone(void) const;
-		virtual void	use(ICharacter&);
+		virtual void	mine(IAsteroid*);
 };
 
 #endif

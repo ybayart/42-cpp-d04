@@ -1,46 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.cpp                                            :+:      :+:    :+:   */
+/*   StripMiner.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hexa <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 20:56:04 by hexa              #+#    #+#             */
-/*   Updated: 2020/04/28 01:42:06 by hexa             ###   ########.fr       */
+/*   Created: 2020/04/28 01:56:23 by hexa              #+#    #+#             */
+/*   Updated: 2020/04/28 02:59:49 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Ice.hpp"
+#include "StripMiner.hpp"
 
-Ice::Ice(void) : AMateria("ice") {}
+StripMiner::StripMiner(void) {}
 
-Ice::Ice(const Ice &src)
+StripMiner::StripMiner(const StripMiner& src)
 {
 	*this = src;
 }
 
-Ice::~Ice(void) {}
+StripMiner::~StripMiner(void) {}
 
-Ice&
-Ice::operator= (const Ice &rhs)
+StripMiner&
+StripMiner::operator= (const StripMiner &rhs)
 {
-	if (this != &rhs)
-	{
-		this->m_xp = rhs.m_xp;
-		this->m_type = rhs.m_type;
-	}
+	(void)rhs;
 	return (*this);
 }
 
-AMateria*
-Ice::clone(void) const
-{
-	return (new Ice());
-}
-
 void
-Ice::use(ICharacter& target)
+StripMiner::mine(IAsteroid* target)
 {
-	m_xp += 10;
-	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+	std::cout << "* strip mining ... got " << target->beMined(this) << " ! *" << std::endl;
 }

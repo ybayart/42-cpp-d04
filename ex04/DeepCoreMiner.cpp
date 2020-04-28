@@ -1,46 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.cpp                                            :+:      :+:    :+:   */
+/*   DeepCoreMiner.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hexa <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 20:56:04 by hexa              #+#    #+#             */
-/*   Updated: 2020/04/28 01:42:06 by hexa             ###   ########.fr       */
+/*   Created: 2020/04/28 01:56:23 by hexa              #+#    #+#             */
+/*   Updated: 2020/04/28 02:36:53 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Ice.hpp"
+#include "DeepCoreMiner.hpp"
 
-Ice::Ice(void) : AMateria("ice") {}
+DeepCoreMiner::DeepCoreMiner(void) {}
 
-Ice::Ice(const Ice &src)
+DeepCoreMiner::DeepCoreMiner(const DeepCoreMiner& src)
 {
 	*this = src;
 }
 
-Ice::~Ice(void) {}
+DeepCoreMiner::~DeepCoreMiner(void) {}
 
-Ice&
-Ice::operator= (const Ice &rhs)
+DeepCoreMiner&
+DeepCoreMiner::operator= (const DeepCoreMiner &rhs)
 {
-	if (this != &rhs)
-	{
-		this->m_xp = rhs.m_xp;
-		this->m_type = rhs.m_type;
-	}
+	(void)rhs;
 	return (*this);
 }
 
-AMateria*
-Ice::clone(void) const
-{
-	return (new Ice());
-}
-
 void
-Ice::use(ICharacter& target)
+DeepCoreMiner::mine(IAsteroid* target)
 {
-	m_xp += 10;
-	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+	std::cout << "* mining deep ... got " << target->beMined(this) << " ! *" << std::endl;
 }

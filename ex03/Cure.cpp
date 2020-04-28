@@ -6,19 +6,13 @@
 /*   By: hexa <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 21:04:19 by hexa              #+#    #+#             */
-/*   Updated: 2020/04/27 21:05:04 by hexa             ###   ########.fr       */
+/*   Updated: 2020/04/28 01:42:28 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
-Cure::Cure(void) {}
-
-Cure::Cure(const std::string &type)
-{
-	this->m_xp = 0;
-	this->m_type = type;
-}
+Cure::Cure(void) : AMateria("cure") {}
 
 Cure::Cure(const Cure &src)
 {
@@ -38,14 +32,15 @@ Cure::operator= (const Cure &rhs)
 	return (*this);
 }
 
-const std::string&
+AMateria*
 Cure::clone(void) const
 {
 	return (new Cure());
 }
 
-unsigned int
-Cure::use(ICharacter& target) const
+void
+Cure::use(ICharacter& target)
 {
+	m_xp += 10;
 	std::cout << "* heals " << target.getName() << "’s wounds *" << std::endl;
 }

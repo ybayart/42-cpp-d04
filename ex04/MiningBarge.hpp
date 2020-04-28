@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   MiningBarge.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hexa <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 20:52:38 by hexa              #+#    #+#             */
-/*   Updated: 2020/04/28 01:41:54 by hexa             ###   ########.fr       */
+/*   Created: 2020/04/28 02:40:29 by hexa              #+#    #+#             */
+/*   Updated: 2020/04/28 02:49:17 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef MININGBARGE_HPP
+# define MININGBARGE_HPP
 
-# include "AMateria.hpp"
+# include "IMiningLaser.hpp"
+# include "IAsteroid.hpp"
 
-class	Ice : public AMateria
+class MiningBarge
 {
 	public:
-		Ice(void);
-		Ice(const Ice&);
+		MiningBarge(void);
+		MiningBarge(const MiningBarge&);
+		~MiningBarge(void);
 
-		~Ice(void);
+		MiningBarge& operator=	(const MiningBarge&);
 
-		Ice&	operator= (const Ice&);
+		void equip(IMiningLaser*);
+		void mine(IAsteroid*) const;
 
-		AMateria*		clone(void) const;
-		virtual void	use(ICharacter&);
+	private:
+		IMiningLaser*	m_laser[4];
 };
 
 #endif
