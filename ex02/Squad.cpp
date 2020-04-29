@@ -6,7 +6,7 @@
 /*   By: hexa <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 19:14:44 by hexa              #+#    #+#             */
-/*   Updated: 2020/04/27 19:51:36 by hexa             ###   ########.fr       */
+/*   Updated: 2020/04/29 02:27:36 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ int		Squad::push(ISpaceMarine* unit)
     tmp = this->m_squad;
     if (unit != NULL && this->m_present(unit, tmp) == false)
     {
-        tmp = this->m_squad;
         if (this->m_squad != NULL)
         {
             while (tmp->next)
