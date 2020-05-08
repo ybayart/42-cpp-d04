@@ -6,7 +6,7 @@
 /*   By: ybayart <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 16:24:18 by ybayart           #+#    #+#             */
-/*   Updated: 2020/01/21 17:28:09 by ybayart          ###   ########.fr       */
+/*   Updated: 2020/05/08 19:00:38 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,11 @@ void	Character::attack(Enemy* enemy)
 			std::cout << this->m_name << " can't attack" << std::endl;
 		else
 		{
+			(void)enemy;
 			this->m_AP -= this->m_weapon->getAPCost();
 			std::cout << this->m_name << " hasttaque " << enemy->getType() << " with a " << this->m_weapon->getName() << std::endl;
 			this->m_weapon->attack();
 			enemy->takeDamage(this->m_weapon->getDamage());
-			if (enemy->getHP() <= 0)
-				enemy->Enemy::~Enemy();
 		}
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: hexa <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 20:10:13 by hexa              #+#    #+#             */
-/*   Updated: 2020/04/27 20:22:25 by hexa             ###   ########.fr       */
+/*   Updated: 2020/05/08 18:04:01 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int		main(void)
 	ISquad* vlc = new Squad;
 	ISpaceMarine* bob = new TacticalMarine;
 	ISpaceMarine* jim = new AssaultTerminator;
+
+	std::cout << "size: " << vlc->getCount() << std::endl;
 
 	vlc->push(bob);
 	vlc->push(jim);
@@ -42,6 +44,7 @@ int		main(void)
 	vlc->getUnit(1)->rangedAttack();
 	vlc->getUnit(0)->meleeAttack();
 	vlc->getUnit(1)->meleeAttack();
+	std::cout << vlc->getUnit(10) << " | " << vlc->getUnit(-42) << std::endl;
 
 	std::cout << "size: " << vlc->getCount() << std::endl;
 

@@ -6,7 +6,7 @@
 /*   By: ybayart <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 00:01:22 by ybayart           #+#    #+#             */
-/*   Updated: 2020/01/16 00:26:31 by ybayart          ###   ########.fr       */
+/*   Updated: 2020/05/08 20:37:44 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Looser : public Victim
 Looser::Looser(std::string name) : Victim(name)
 {
 	this->m_name = name;
-	std::cout <<  "I'm a looser." << std::endl;
+	std::cout << "I'm a looser." << std::endl;
 }
 
 Looser::~Looser(void)

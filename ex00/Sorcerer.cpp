@@ -6,7 +6,7 @@
 /*   By: ybayart <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 23:50:02 by ybayart           #+#    #+#             */
-/*   Updated: 2020/01/16 00:45:16 by ybayart          ###   ########.fr       */
+/*   Updated: 2020/05/08 20:50:03 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Sorcerer& Sorcerer::operator=(const Sorcerer &copy)
 {
 	this->m_name = copy.getName();
 	this->m_title = copy.getTitle();
-    return (*this);
+	return (*this);
 }
 
 //========== DESTRUCT
@@ -54,7 +54,7 @@ std::string		Sorcerer::getTitle(void) const
 
 //========== MEMBER
 
-void			Sorcerer::polymorph(Victim const& elem)
+void			Sorcerer::polymorph(Victim const& elem) const
 {
 	elem.getPolymorphed();
 }

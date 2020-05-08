@@ -6,7 +6,7 @@
 /*   By: ybayart <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 00:26:46 by ybayart           #+#    #+#             */
-/*   Updated: 2020/01/16 00:35:25 by ybayart          ###   ########.fr       */
+/*   Updated: 2020/05/08 20:50:14 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Peon::Peon(const Peon &copy) {
 Peon& Peon::operator=(const Peon &copy)
 {
 	this->m_name = copy.getName();
-    return (*this);
+	return (*this);
 }
 
 Peon::~Peon(void)

@@ -6,7 +6,7 @@
 /*   By: hexa <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 20:08:51 by hexa              #+#    #+#             */
-/*   Updated: 2020/04/27 20:18:21 by hexa             ###   ########.fr       */
+/*   Updated: 2020/05/08 20:47:23 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ AssaultTerminator::~AssaultTerminator(void)
 AssaultTerminator
 &AssaultTerminator::operator= (const AssaultTerminator &rhs)
 {
-    (void)rhs;
-    return (*this);
+	(void)rhs;
+	return (*this);
 }
 
 ISpaceMarine*

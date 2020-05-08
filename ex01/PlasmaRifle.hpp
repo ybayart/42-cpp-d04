@@ -6,7 +6,7 @@
 /*   By: ybayart <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 14:48:42 by ybayart           #+#    #+#             */
-/*   Updated: 2020/01/20 15:00:01 by ybayart          ###   ########.fr       */
+/*   Updated: 2020/05/08 20:48:54 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ class	PlasmaRifle : public AWeapon
 	private:
 
 	public:
-	PlasmaRifle(std::string const & name = "Plasma Rifle", int apcost = 5, int damage = 21);
-	PlasmaRifle(const PlasmaRifle& old);
-	PlasmaRifle&	operator = (const PlasmaRifle& copy);
-	~PlasmaRifle(void);
+		PlasmaRifle(std::string const & name = "Plasma Rifle", int apcost = 5, int damage = 21);
+		PlasmaRifle(const PlasmaRifle& old);
+		PlasmaRifle& operator=	(const PlasmaRifle& copy);
+		~PlasmaRifle(void);
 
-	virtual void  attack(void) const;
+		virtual void	attack(void) const;
 };
 
 #endif

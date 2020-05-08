@@ -6,7 +6,7 @@
 /*   By: hexa <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 20:03:07 by hexa              #+#    #+#             */
-/*   Updated: 2020/04/27 20:18:05 by hexa             ###   ########.fr       */
+/*   Updated: 2020/05/08 20:45:27 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ TacticalMarine::~TacticalMarine(void)
 TacticalMarine
 &TacticalMarine::operator= (const TacticalMarine &rhs)
 {
-    (void)rhs;
-    return (*this);
+	(void)rhs;
+	return (*this);
 }
 
 ISpaceMarine*

@@ -6,7 +6,7 @@
 /*   By: ybayart <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 00:05:29 by ybayart           #+#    #+#             */
-/*   Updated: 2020/01/16 00:26:40 by ybayart          ###   ########.fr       */
+/*   Updated: 2020/05/08 20:50:22 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Victim::Victim(const Victim &copy) {
 Victim& Victim::operator=(const Victim &copy)
 {
 	this->m_name = copy.getName();
-    return (*this);
+	return (*this);
 }
 
 Victim::~Victim(void)

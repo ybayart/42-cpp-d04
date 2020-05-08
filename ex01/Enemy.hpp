@@ -6,7 +6,7 @@
 /*   By: ybayart <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 15:05:43 by ybayart           #+#    #+#             */
-/*   Updated: 2020/01/21 17:27:13 by ybayart          ###   ########.fr       */
+/*   Updated: 2020/05/08 18:52:41 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class	Enemy
 	Enemy(int hp = 0, std::string const & type = "");
 	Enemy(const Enemy& old);
 	Enemy&	operator = (const Enemy& copy);
-	~Enemy(void);
+	virtual ~Enemy(void);
 	int				getHP(void) const;
 	std::string		getType(void) const;
 	virtual void	takeDamage(int damage);

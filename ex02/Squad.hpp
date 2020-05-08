@@ -6,7 +6,7 @@
 /*   By: hexa <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 18:17:00 by hexa              #+#    #+#             */
-/*   Updated: 2020/04/27 20:01:35 by hexa             ###   ########.fr       */
+/*   Updated: 2020/05/08 20:46:01 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@
 class	Squad : public ISquad
 {
 	public:
-        Squad(void);
-        Squad(const Squad&);
+		Squad(void);
+		Squad(const Squad&);
 
-        ~Squad(void);
+		~Squad(void);
 
-        Squad   &operator= (const Squad&);
+		Squad& operator=	(const Squad&);
 
 		virtual int				getCount() const;
 		virtual ISpaceMarine*	getUnit(int) const;

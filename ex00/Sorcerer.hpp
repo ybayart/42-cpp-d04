@@ -6,7 +6,7 @@
 /*   By: ybayart <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 23:46:09 by ybayart           #+#    #+#             */
-/*   Updated: 2020/01/16 00:47:48 by ybayart          ###   ########.fr       */
+/*   Updated: 2020/05/08 18:24:02 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class	Sorcerer
 
 	std::string		getName(void) const;
 	std::string		getTitle(void) const;
-	void			polymorph(Victim const& elem);
+	void			polymorph(Victim const& elem) const;
 };
 
 std::ostream &operator << (std::ostream &o, Sorcerer const& elem);

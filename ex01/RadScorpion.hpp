@@ -6,7 +6,7 @@
 /*   By: ybayart <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 15:26:53 by ybayart           #+#    #+#             */
-/*   Updated: 2020/01/21 17:21:39 by ybayart          ###   ########.fr       */
+/*   Updated: 2020/05/08 18:56:59 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class	RadScorpion : public Enemy
 	RadScorpion(int hp = 80, std::string const & type = "RadScorpion");
 	RadScorpion(const RadScorpion& old);
 	RadScorpion&	operator = (const RadScorpion& copy);
-	~RadScorpion(void);
+	virtual ~RadScorpion(void);
 };
 
 #endif

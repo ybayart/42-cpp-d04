@@ -6,7 +6,7 @@
 /*   By: hexa <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/28 00:07:39 by hexa              #+#    #+#             */
-/*   Updated: 2020/04/28 01:47:57 by hexa             ###   ########.fr       */
+/*   Updated: 2020/05/08 20:35:50 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,14 @@ int
 main(void)
 {
 	IMateriaSource* src = new MateriaSource();
-	src->learnMateria(new Ice());
-	src->learnMateria(new Cure());
-	
-	ICharacter* moi = new Character("moi");
-
 	AMateria* tmp;
+	src->learnMateria((tmp = new Ice()));
+	delete tmp;
+	src->learnMateria((tmp = new Cure()));
+	delete tmp;
+	
+	Character* moi = new Character("moi");
+
 	tmp = src->createMateria("ice");
 	moi->equip(tmp);
 	tmp = src->createMateria("cure");

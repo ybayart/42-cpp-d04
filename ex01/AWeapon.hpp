@@ -6,7 +6,7 @@
 /*   By: ybayart <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 14:23:00 by ybayart           #+#    #+#             */
-/*   Updated: 2020/01/20 14:56:26 by ybayart          ###   ########.fr       */
+/*   Updated: 2020/05/08 18:34:04 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class	AWeapon
 	AWeapon(std::string const & name = "", int apcost = 0, int damage = 0);
 	AWeapon(const AWeapon& old);
 	AWeapon&	operator = (const AWeapon& copy);
-	~AWeapon(void);
+	virtual ~AWeapon(void);
 	std::string		getName(void) const;
 	int				getAPCost(void) const;
 	int				getDamage(void) const;

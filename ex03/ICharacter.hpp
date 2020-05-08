@@ -6,7 +6,7 @@
 /*   By: hexa <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 23:35:10 by hexa              #+#    #+#             */
-/*   Updated: 2020/04/28 01:38:29 by hexa             ###   ########.fr       */
+/*   Updated: 2020/05/08 19:52:31 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class	ICharacter
 		virtual		~ICharacter() {}
 
 		virtual std::string const&	getName() const = 0;
-		virtual AMateria const*		get(int) const = 0;
 
 		virtual void	equip(AMateria*) = 0;
 		virtual void	unequip(int) = 0;

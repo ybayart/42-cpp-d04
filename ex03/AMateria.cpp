@@ -6,7 +6,7 @@
 /*   By: hexa <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 20:41:57 by hexa              #+#    #+#             */
-/*   Updated: 2020/04/28 01:42:45 by hexa             ###   ########.fr       */
+/*   Updated: 2020/05/08 20:44:54 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,6 @@ AMateria::getXP(void) const
 void
 AMateria::use(ICharacter& target)
 {
-    m_xp += 10;
-    (void)target;
+	m_xp += 10;
+	(void)target;
 }

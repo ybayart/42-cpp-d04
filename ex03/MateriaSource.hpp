@@ -6,7 +6,7 @@
 /*   By: hexa <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/28 00:31:38 by hexa              #+#    #+#             */
-/*   Updated: 2020/04/28 00:52:39 by hexa             ###   ########.fr       */
+/*   Updated: 2020/05/08 20:16:32 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class	MateriaSource : public IMateriaSource
 		MateriaSource(const MateriaSource&);
 		MateriaSource &operator=	(const MateriaSource&);
 
-		virtual				~MateriaSource() {}
+		virtual				~MateriaSource();
 
 		virtual void		learnMateria(AMateria*);
 		virtual AMateria*	createMateria(std::string const&);
