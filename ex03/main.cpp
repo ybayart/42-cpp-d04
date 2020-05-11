@@ -6,7 +6,7 @@
 /*   By: hexa <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/28 00:07:39 by hexa              #+#    #+#             */
-/*   Updated: 2020/05/08 20:35:50 by hexa             ###   ########.fr       */
+/*   Updated: 2020/05/08 22:53:43 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ main(void)
 
 	moi->unequip(-1);
 	moi->unequip(5);
-	moi->unequip(0);
 	moi->unequip(1);
 
 	for (int i = 0;i < 4;i++)
@@ -63,6 +62,7 @@ main(void)
 		moi->use(i, *bob);
 	}
 
+	delete tmp;
 	delete bob;
 	delete moi;
 	delete src;

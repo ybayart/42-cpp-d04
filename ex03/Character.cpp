@@ -6,7 +6,7 @@
 /*   By: hexa <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 23:43:11 by hexa              #+#    #+#             */
-/*   Updated: 2020/05/08 20:43:44 by hexa             ###   ########.fr       */
+/*   Updated: 2020/05/08 22:51:23 by hexa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,6 @@ Character::unequip(int idx)
 {
 	if (idx >= 0 && idx < 4 && this->m_inv[idx] != NULL)
 	{
-		delete this->m_inv[idx];
 		this->m_inv[idx] = NULL;
 	}
 }
